@@ -12,7 +12,7 @@ class ModalCalendar extends React.Component{
     }
     chargeEvents(){
         return this.props.stateModalCalendar.eventsForCalendar.map(e => {
-         return <Link to={`/${e.id}`} style={{ textDecoration: "none" }}>
+         return <Link to={`/details/${e.id}`} style={{ textDecoration: "none" }}>
             <CardEvent name={e.name} genre={e.genre} schedule={e.schedule} image={e.performerImage} />
          </Link>
         })

@@ -22,8 +22,8 @@ export default function Home() {
   const dispatch = useDispatch();
   const { user, loginWithPopup } = useAuth0();
   const {Likes} = useSelector((state)=> state);
-  // const { User } = useSelector((state) => state)
-  console.log('Likes:',Likes)
+  // const {User} = useSelector(state => state);
+  
   const allEventsPagination = useSelector((state) => {
     return state.BigEvents;
   });
@@ -84,7 +84,7 @@ export default function Home() {
             {currentBigEvents?.map((el) => {
                 return (
                   <div key={el.id}>
-                    <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                    <Link style={{ textDecoration: "none" }} to={`/details/${el.id}`}>
                       <CardBigEvent
                         name={el.name}
                         genreId={el.genreId}
@@ -112,7 +112,7 @@ export default function Home() {
             {currentEvents?.map((el) => {
                 return (
                   <div key={el.id}>
-                    <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                    <Link style={{ textDecoration: "none" }} to={`/details/${el.id}`}>
                       <CardEvent
                         name={el.name}
                         image={el.performerImage}

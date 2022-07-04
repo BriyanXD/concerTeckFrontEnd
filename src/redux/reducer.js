@@ -345,6 +345,13 @@ function reducers(state = initialState, { type, payload }) {
           tdosEvents:payload
         }
       }
+    case "UPDATE_CART":
+      let data = state.cartDB.filter(e => e.id !== payload.id)
+      data.push(payload)
+      return {
+        ...state,
+        cartDB: data
+      }
     default:
       return state;
   }

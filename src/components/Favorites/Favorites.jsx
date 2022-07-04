@@ -24,7 +24,7 @@ export default function Favorites(){
                     return (
                        
                      <div className={s.containerClose}>
-                        <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                        <Link style={{ textDecoration: "none" }} to={`/details/${el.id}`}>
                         <CardBigEvent
                         name={el.name}
                         genreId={el.genreId}
@@ -42,7 +42,7 @@ export default function Favorites(){
                 events?.map((el)=>{
                     return(
                      <div className={s.containerClose2}>
-                        <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                        <Link style={{ textDecoration: "none" }} to={`/details/${el.id}`}>
                         <CardEvent
                         name={el.name}
                         image={el.performerImage}

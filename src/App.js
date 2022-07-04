@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/details/:id" element={<Detail />} />
           {/* <Route exact path='/registrar/:usuario' element= {<ProfileUser/>}/> */}
-          {/*  <Route element={<ProtectedRoutes/>}> */}
+          {/* <Route element={<ProtectedRoutes/>}> */}
           <Route exact path="/perfil/:id" element={<ProfileUser />} />
           {/* </Route> */}
           {/* <Route element={<ProtectedRoutesAdmin/>}> */}
