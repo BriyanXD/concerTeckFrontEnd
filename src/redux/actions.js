@@ -123,7 +123,12 @@ export function register(value) {
   return async function (dispatch) {
     try {
       const register = await axios.post(`${url}/api/user`, value);
+      console.log(register, "actions");
       localStorage.setItem("token", register.data[2].token);
+      localStorage.setItem(
+        "isAdmin",
+        register.data[1].user[0].isAdmin ? "true" : "false"
+      );
       // console.log(register.data[2].token, "datos de usuario")
       return dispatch({
         type: "LOGIN_USER",
