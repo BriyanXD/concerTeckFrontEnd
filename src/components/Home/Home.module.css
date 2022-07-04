@@ -1,0 +1,91 @@
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    background: url(../../img/bk.jpg);
+}
+.eventcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+.bigcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+.litlecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+.midcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+.pagination{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+::-webkit-scrollbar{
+    background-color: rgba(51, 51, 51, 0.9);
+    width: 8px;
+    height: 0;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FF4C29;
+    border-radius: 5px;
+}
+
+.heart{
+    position: absolute;
+    color: red;
+    z-index: 20;
+    margin-left: 16px;
+    margin-top: -2.7rem;
+    cursor: pointer;
+ 
+}
+.heartWhite{
+    position: absolute;
+    color: white;
+    z-index: 20;
+    margin-left: 16px;
+    margin-top: -2.7rem;
+    cursor: pointer;
+ 
+}
+
+
+.heart2{
+    position: absolute;
+    color: red;
+    z-index: 20;
+    margin-left: 15px;
+    margin-top: -2rem;
+    cursor: pointer;
+ 
+}
+
+.heart2White{
+    position: absolute;
+    color: white;
+    z-index: 20;
+    margin-left: 15px;
+    margin-top: -2rem;
+    cursor: pointer;
+ 
+}

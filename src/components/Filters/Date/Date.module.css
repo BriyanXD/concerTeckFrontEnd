@@ -1,0 +1,9 @@
+.date{
+    background-color: #FF4C29;
+    width: 10vw;
+    height: 2.5vw;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}

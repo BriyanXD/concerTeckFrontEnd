@@ -1,0 +1,16 @@
+.containerProfileUser{
+    width: 100vw;
+    height: 100vh;
+    background: url(../../img/bk.jpg);
+}
+
+.containerDataUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.title{
+    margin: 0px 0px 0px 0px
+}

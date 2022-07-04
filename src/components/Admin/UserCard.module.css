@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+.cardEvent{
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transition: .4s;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+}
+.id{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+.name{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+.cardEvent:hover{
+    background-color: rgb(85, 85, 85);
+    color: wheat;
+}
+.buttonsCard{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: flex-end;
+}
+.button{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    width: 150px;
+    border: 0;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.button:hover{
+    background-color: wheat;
+}

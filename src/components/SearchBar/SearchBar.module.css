@@ -1,0 +1,20 @@
+@import url(../../index.css);
+
+.searchBar{
+    color: var(--color2);
+    background-color: #dbdada;
+    width: 22vw;
+    height: 2.2vw;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: 0;
+    
+    margin-bottom: 5px;
+}
+.close{
+    margin-left: -30px;
+    background-color: transparent;
+    border-color: transparent;
+    
+    
+}

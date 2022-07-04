@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2vw;
+    margin-top: 3.5vw;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+}
+
+.img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 1vw;
+    margin-bottom: 4.5vw;
+
+}
+
+.p{
+    color: white;
+    margin: 3vh ;
+    font-size: 13px;
+    
+}
+
+.button{
+margin-right: 2vw;
+background-color: #FF4C29;
+width: 7vw;
+height: 2vw;
+text-align: center;
+border-radius: 3px;
+margin-bottom: 5vw;
+font-size: 15px;
+/* margin-right: 35px; */
+border-color: #FF4C29;
+/* margin: 13px; */
+cursor: pointer;
+margin-top: 3vh;
+}

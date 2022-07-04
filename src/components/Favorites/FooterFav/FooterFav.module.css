@@ -1,0 +1,22 @@
+.conteiner{
+    background-color: rgba(255, 255, 255, 0);
+    width: 100vw;
+    height: 8vh;
+    vertical-align: bottom;
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.icon{
+    color: #FF4C29;
+}
+
+.share{
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+.containerGeneral{
+    background-color: rgba(104, 104, 104,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerInfo{
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.info{
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.containerClose{
+    display: flex;
+    justify-content: flex-end;
+}
+.btnClose{
+    border: 0;
+    font-size: 15px;
+    border-radius: 30%;
+    margin-bottom: 90px;
+}
+.btnClose:hover{
+    color: wheat;
+    background-color: rgb(156, 156, 156);
+}

@@ -1,0 +1,62 @@
+@import url(../../index.css);
+
+.containerFooter{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 1px;
+    width: 100vw;
+    height: 8vh;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+    vertical-align: bottom;
+    line-height: 0;
+}
+  
+
+.facebook{
+    color: #ffffff;
+    font-size: 2.5vw;
+    margin-bottom: 2px    
+}
+
+.instagram{
+    color:white;
+    background-color: transparent;
+    font-size: 2.5vw;
+    margin-bottom: 1px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 300px;
+    align-items: center;
+    width: 200px;
+}
+
+.contact{
+    color: #dbdada;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.contactProducer{
+    color: #dbdada;
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 4vw;
+}
+
+

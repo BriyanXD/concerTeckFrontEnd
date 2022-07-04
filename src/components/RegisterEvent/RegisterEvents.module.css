@@ -1,0 +1,52 @@
+@import url(../../index.css);
+
+.container{
+    background-image: url(../../img/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg);
+    width: 100vw;
+    /* background-color: var(--color2); */
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    color: var(--color4);
+
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    box-shadow:  5px 5px 14px rgba(0, 0, 0, 0.32);
+    width: 40vw;
+    height: 25vw;
+    margin: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.form{
+    /* margin: 40px; */
+    margin-bottom: 315px;
+    
+}
+
+.footer{
+   background-color: rgba(155, 155, 155, 0.7);
+}
+
+.error{
+    color: var(--color4);
+}
+
+.label{
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    padding: 3px;
+}
+
+.h2{
+    color: black;
+}
