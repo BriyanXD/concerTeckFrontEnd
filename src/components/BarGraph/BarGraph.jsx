@@ -44,11 +44,11 @@ export default function BarGraph(event){
         ,maxStockVIP
         ,minStock
         ,isBigEvent} = event.event.venue
-    const ventas = [(stockPalco-maxStockPalco)
-                    ,(stockGeneral-maxStockGeneral),
-                    (stockGeneralLateral-maxStockGeneralLateral),
-                    (stockStreaming-maxStockStreaming),
-                    (stockkVIP-maxStockVIP),]
+    const ventas = [(maxStockPalco-stockPalco)
+                        ,(maxStockGeneral-stockGeneral),
+                        (maxStockGeneralLateral-stockGeneralLateral),
+                        (maxStockStreaming-stockStreaming),
+                        (maxStockVIP-stockkVIP),]
     const maxVentas = [(maxStockPalco)
                     ,(maxStockGeneral),
                     (maxStockGeneralLateral),
