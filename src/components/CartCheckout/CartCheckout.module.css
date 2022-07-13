@@ -1,0 +1,112 @@
+.container{
+    background-image: url(../../img/felix-besombes-9qUEBg1qVKc-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    color: var(--color4);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contenedor{
+    display: flex;
+
+}
+
+.detalle{
+    color: var(--color4);
+    padding: 1vw;
+    margin-left: 2vw;
+    font-size: 2vw;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    box-shadow:  5px 5px 14px rgba(0, 0, 0, 0.32);
+    width: 60vw;
+    height: auto;
+    display: grid;
+    margin-left: 4vw;
+    
+    
+    /* 
+    justify-content: space-between;
+    text-align: center; */
+    border-radius: 5px;
+    /* overflow: auto; */
+    padding-bottom: 3vh;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    margin: 1vw;
+    background: linear-gradient(117deg, rgb(254, 145, 80), rgb(254, 100, 70));
+    width: 9vw;
+    height: 2.7vw;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    margin-top: 2vw;
+    transition: box-shadow 0.25s ease 0s;
+    color: whitesmoke;
+    font-size: 1vw;
+    }
+    
+    .button:hover,
+    .button:focus {
+     background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+     box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+    }
+
+.cardDetail{
+    display: flex;
+    flex-direction: column;
+    /* padding: 2vw; */
+    margin-bottom: 2vw;
+}
+
+.name, .schedule, .type, .price, .quantity, .total{ 
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; */
+    padding: 0.5vw;
+    padding-top: 2.5vw;
+    /* margin-top: 0.2vw; */
+    white-space: pre;
+    color: #dcdbdb;
+    font-size: 1vw;
+}
+
+.total{
+    font-weight: 750;
+    color: #EEEEEE;
+    font-size: 1vw;
+}
+
+.img{
+    height: 9vw;
+    width: 13vw;
+    margin: 1vw;
+}
+
+.totalFinal{
+    text-align: center;
+    font-size: medium;
+    font-weight: 750;
+    color: #EEEEEE;
+    font-size: 1vw;
+
+}
+
+.separacion{
+    display: flex;
+}

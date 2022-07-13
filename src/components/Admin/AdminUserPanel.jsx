@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import UserCard from "./UserCard";
 import PerfilUserAdmin from "./PerfilUserAdmin";
 import AdminUserPermised from "./AdminUserPermised";
-import {searchUserByUserName} from "../../redux/actions"
+import {searchUserByUserName, getAllUsers} from "../../redux/actions"
 import Style from "./AdminUserPanel.module.css"
 export default function AdminUserPanel(){
     const allUsers = useSelector((state) => state.stateAdminPanel?.allUsers)
@@ -11,7 +11,6 @@ export default function AdminUserPanel(){
     const UserByUserName = useSelector((state) => state.stateAdminPanel?.UserByUserName)
     const modalUser = useSelector((state) => state.stateAdminPanel?.modalUser)
     const modalUserPermised = useSelector((state) => state.stateAdminPanel?.modalUserPermised)
-    console.log('Prueba',UserByUserName)
     const dispatch = useDispatch()
 
     function handleInputChange(e){
@@ -20,9 +19,9 @@ export default function AdminUserPanel(){
         dispatch(searchUserByUserName(e.target.value))
     }
 
-    // useEffect(()=>{
-    //     dispatch(getAllUsers())
-    // })
+     useEffect(()=>{
+        dispatch(getAllUsers())
+     },[])
 
     return(
         <div>

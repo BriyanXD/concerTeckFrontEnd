@@ -1,21 +1,43 @@
 @import url(../../index.css);
 
 .containerGeneral{
-    display: grid;
-    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color1);
+    color: var(--color4);
+    width: 35vw;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 1vw;
+   /* height: 75vh; */
+    /* overflow-y: scroll; */
+    
+   
 }
 .carritoVacio{
-    background-color: var(--color2);
-    width: 100vw;
-    height: 90vh;
+    /* background-color: var(--color2); */
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--color4);
     font-size: 30px;
+    border-radius: 5px;
+}
+.tipo{
+   display: flex;
+   flex-direction: column;
+  
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .containerNavVacio{
     background-color: var(--color2);
+
 }
 .containerInfo{
     background-color: var(--color2);
@@ -46,7 +68,7 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    overflow: auto;
+    
 }
 .informacion{
     width: 100%;
@@ -73,15 +95,15 @@
     justify-content: flex-end;
 }
 .btn{
-    background-color: var(--color1);
+    background-color: var(--color3);
     color: var(--color4);
     border: 0;
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
     margin-left: 5px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 19px;
+    font-size: 15px;
     transition: .3s;
 }
 .btn:hover{
@@ -89,20 +111,23 @@
     color: var(--color1);
 }
 .btncomprar{
-    background-color: var(--color1);
-    color: var(--color4);
-    border: 0;
+    background: linear-gradient(117deg, rgb(254, 145, 80), rgb(254, 100, 70));
+    color: whitesmoke;
+    border: none;
     width: 150px;
     height: 28px;
-    margin-left: 5px;
+    min-height: 20px;
+    margin-top: 5px;
     cursor: pointer;
     border-radius: 5px;
-    transition: .3s;
+    transition: box-shadow 0.25s ease 0s;
 }
-.btncomprar:hover{
-    background-color: var(--color4);
-    color: var(--color1);
+.btncomprar:hover,
+.btncomprar:focus {
+ background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+ box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
 }
+
 .btncomprarpasarela{
     background-color: var(--color3);
     color: var(--color4);
@@ -118,7 +143,14 @@
     background-color: var(--color4);
     color: var(--color1);
 }
-.textTotal{
-    color: var(--color4);
-    font-weight: bold;
+
+.image{
+    width: 150px;
+    height: 90px;
+}
+.items{
+    
+    margin: 5px;
+    display: flex;
+    width: 35vw;
 }

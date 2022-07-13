@@ -1,0 +1,58 @@
+.containerGeneral{
+    background-color: rgba(104, 104, 104,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerInfo{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+}
+.containerClose{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+.btnClose{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(247, 107, 107);
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+}
+.btnClose:hover{
+    background-color: rgb(133, 133, 133);
+}
+.info{
+    padding: 20px;
+}
+.title{
+    font-weight: 700;
+}
+.containerTicket{
+    background-color: rgb(228, 228, 228);
+    border-radius: 5px;
+    padding: 20px;
+}
+.contenedorEventUser{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.contenedorUser,.contenedorEvent{
+    background-color: rgb(97, 97, 97);
+    color: wheat;
+    padding: 20px;
+    border-radius: 5px;
+    width: 48%;
+}

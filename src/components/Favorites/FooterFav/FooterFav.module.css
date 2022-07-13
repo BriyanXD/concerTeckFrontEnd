@@ -1,12 +1,13 @@
+/* MEDIDAS CORREGIDAS A REM*/
+
 .conteiner{
-    background-color: rgba(255, 255, 255, 0);
-    width: 100vw;
-    height: 8vh;
-    vertical-align: bottom;
-    line-height: 0;
+    background-color: rgba(255, 255, 255, 0.096);
+    width: 96rem;
+    height: 3.7rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    /* margin-top: 25rem; */
+    /* position: static; */
 }
 
 .icon{

@@ -1,0 +1,45 @@
+.contenedor{
+    background-image: url(../../img/felix-besombes-9qUEBg1qVKc-unsplash.jpg);
+    background-size: cover;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1{
+    color: white;
+    text-align: center;
+    text-shadow:  0.06rem 0.06rem 0.6rem white;
+    margin-top: 5vw;
+}
+
+.button{
+    margin: 1vw;
+    background: linear-gradient(117deg, rgb(254, 145, 80), rgb(254, 100, 70));
+    width: 9vw;
+    height: 2vw;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+    margin-top: 5.4vw;
+    transition: box-shadow 0.25s ease 0s;
+    color: whitesmoke;
+    font-size: 1vw;
+    }
+    
+    .button:hover,
+    .button:focus {
+     background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+     box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+    }
+
+.img{
+    width: 25vw;
+    height: 29vw;
+}

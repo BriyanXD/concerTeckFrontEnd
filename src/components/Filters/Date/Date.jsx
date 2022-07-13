@@ -18,8 +18,8 @@ export default function Date(setCurrenPag,setCurrentPage) {
        <div>
             <select name="" id="" className={style.date} onChange={e =>{ handleOrderByReleased(e)}}>
                 <option className={style.option}>Orden Por Fecha</option>
-                <option value="asc" className={style.option}>Eventos más Proximos</option>
-                <option value='des' className={style.option}>Ultimos Eventos</option>
+                <option value="asc" className={style.option}>Eventos más Próximos</option>
+                <option value='des' className={style.option}>Últimos Eventos</option>
             </select> 
         </div> 
       

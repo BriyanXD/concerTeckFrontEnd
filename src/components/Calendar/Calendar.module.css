@@ -1,26 +1,28 @@
+/* archivo con css REM CORRGIDO!!! */
+
 @import url(../../index.css);
 
 
 .calendar{
     background-color: dimgray;
     border: 1px solid  black;
-    height: 550px;
-    width: 650px;
-    border-radius: 3px;
+    height: 34.2rem;
+    width: 40.6rem;
+    border-radius: 0.2rem;
     background-color: var(--fc-page-bg-color);
     color: var(--color4);
 }
 
 .fc .fc-col-header-cell-cushion {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 0.6rem 0.6rem;
 }
 
 .fc .fc-col-header-cell-cushion { /* needs to be same precedence */
-    padding-top: 2px; /* an override! */
-    padding-bottom: 2px; /* an override! */
+    padding-top: 0.1rem; /* an override! */
+    padding-bottom: 0.1rem; /* an override! */
   }
 
 .fc-scrollgrid-sync-inner{
-    width: 120px;
+    width: 7.5rem;
 }

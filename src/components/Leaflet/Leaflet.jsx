@@ -21,15 +21,15 @@ export default function Leaflet(data) {
     coord.push(parseFloat(data.data.split(' ')[0]))    
     coord.push(parseFloat(data.data.split(' ')[1]))
     
-// console.log('Coord', coord)
+console.log('Coord', coord)
  
 
     // center= {[51.505, -0.09]}
   return (
  
-        <MapContainer center={coord} zoom={15} scrollWheelZoom={true}>
+        <MapContainer center={coord} zoom={10} scrollWheelZoom={true}>
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> concerTeck'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={coord} >

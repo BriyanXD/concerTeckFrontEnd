@@ -1,3 +1,6 @@
+    /* MEDIDAS CAMBIADAS A VW (FUENTES) */
+
+
 @import url(../../index.css);
 
 .containerFooter{
@@ -17,13 +20,13 @@
   
 
 .facebook{
-    color: #ffffff;
+    color: var(--color4);
     font-size: 2.5vw;
     margin-bottom: 2px    
 }
 
 .instagram{
-    color:white;
+    color: var(--color4);
     background-color: transparent;
     font-size: 2.5vw;
     margin-bottom: 1px;
@@ -34,20 +37,21 @@
     flex-direction: row;
     justify-content: space-around;
     font-size: 18px;
+    padding-left: 3%;
 }
 
 .redes{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-left: 300px;
+    margin-left: 8vw;
     align-items: center;
-    width: 200px;
+    width: 10vw;
 }
 
 .contact{
-    color: #dbdada;
-    font-size: 22px;
+    color: var(--color4);
+    font-size: 1.5vw;
     cursor: pointer;
 }
 
@@ -57,6 +61,13 @@
     cursor: pointer;
     text-decoration: none;
     margin-left: 4vw;
+}
+
+.aboutUs{
+    color: var(--color4);
+    font-size: 1.5vw;
+    cursor: pointer;
+    margin-left: 6vw;
 }
 
 

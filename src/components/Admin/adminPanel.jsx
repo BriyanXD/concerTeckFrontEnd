@@ -1,17 +1,18 @@
 import React from "react";
 import Login from "../Login/Login";
 import Modal from "../Modals/Modal/Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBarProfile from '../ProfileUser/NavBarProfile/NavBarProfile'
 import { useDispatch, useSelector } from "react-redux";
 // import CardConteiner from "./adminCardConteiner";
-import {getAllUsers, getEvents, getAllSolicits} from "../../redux/actions"
+import {getAllUsers, getEvents, getAllBlackList,getAllTickets} from "../../redux/actions"
 import Style from "./adminPanel.module.css"
-
+import { Link, useNavigate } from "react-router-dom";
 import AdminUserPanel from "./AdminUserPanel";
 import AdminEventPanel from "./AdminEventPanel";
 //import AdminSolicitPanel from "./AdminSolicitPanel";
-import AdminSolicit from "./AdminSolicit";
+import AdminBlackListPanel from "./AdminBlackListPanel";
+import AdminOrdersPanel from "./AdminOrdersPanel";
 
 export default function PanelAdmin({setUser}){
     
@@ -19,14 +20,26 @@ export default function PanelAdmin({setUser}){
     const [active, setActive] = useState(false);
     const [usersActive, setUsers] = useState(true);
     const [eventsActive, setEvents] = useState(false);
-    const [solicitsActive, setSolicits] = useState(false);
-
+    const [blackList, setBlackList] = useState(false);
+    const [ordersActive, setOrdersActive] = useState(false);
 
     const user = useSelector((state) => state.User);
-
-
-    
+    const navigate = useNavigate(); 
     const dispatch = useDispatch()
+
+    useEffect(()=>{
+        try{
+            const admin = JSON.parse(localStorage.getItem("user"))
+            if(!admin.isAdmin){
+                navigate("/")
+            }
+            else{
+                dispatch(getAllUsers()); 
+            }
+        } catch(error){
+            navigate("/")
+        }  
+    }, [dispatch])
     
     /* useEffect (()=>{
         dispatch(getAllUsers())
@@ -56,25 +69,34 @@ export default function PanelAdmin({setUser}){
     //     </div>
     //     )
     // }
-    function handlerClickUsuarios(){
+    function handlerClickUsers(){
         dispatch(getAllUsers())
         setEvents(false)
-        setSolicits(false)
+        setBlackList(false)
+        setOrdersActive(false)
         setUsers(true)
     }
-    function handlerClickEventos(){
+    function handlerClickEvents(){
         dispatch(getEvents())
-        setSolicits(false)
+        setBlackList(false)
         setUsers(false)
+        setOrdersActive(false)
         setEvents(true)
     }
-    function handlerClickSolicits(){
-        dispatch(getAllSolicits())
+    function handlerClickTicketReceipts(){
+        dispatch(getAllBlackList())
         setEvents(false)
         setUsers(false)
-        setSolicits(true)
+        setOrdersActive(false)
+        setBlackList(true)
     }
-    
+    function handleClickOrders(){
+        dispatch(getAllTickets())
+        setBlackList(false)
+        setUsers(false)
+        setEvents(false)
+        setOrdersActive(true)
+    }
     return(
         <div>
             <div className={Style.containerNavbar}>
@@ -89,30 +111,22 @@ export default function PanelAdmin({setUser}){
                 {/* <UserNavBar/> */}
                 </div>
                 <div className={Style.buttonsContainer}>
-                    <button className={Style.button} onClick={handlerClickUsuarios}>Usuario</button>
+                    <button className={Style.button} onClick={handlerClickUsers}>Usuario</button>
                     <br />
-                    <button className={Style.button} onClick={handlerClickEventos}>Eventos</button>
+                    <button className={Style.button} onClick={handlerClickEvents}>Eventos</button>
                     <br />
-{/*                     <button onClick={handlerClickSolicits}>Solicitudes</button> */}
+                    <button className={Style.button} onClick={handleClickOrders}>Ordenes de compra</button>
+                    <br />
+                    <button className={Style.button} onClick={handlerClickTicketReceipts}>Lista negra</button>
+                    <br />
+                    <Link to="/events"> <button className={Style.button}>Crear evento</button></Link>
                 </div>
         </div>
             <div className={Style.containersInfo}>
-            {usersActive ? <AdminUserPanel/> : eventsActive ? <AdminEventPanel/>: solicitsActive ? <AdminSolicit/>: <h1>Error</h1> }
+            {usersActive ? <AdminUserPanel/> : eventsActive ? <AdminEventPanel/>: blackList ? <AdminBlackListPanel/>:  ordersActive ? <AdminOrdersPanel/> :<h1>Error</h1> }
             </div>
         </div>
         </div>
     )
 }
-
-
-{/*             {
-                userInfo?.map((e,k) =>{
-                    return(
-                        <div>
-                            <UserCard key={k} id={e.id} username={e.username}/>
-                        </div>
-                    )
-                })
-            } */}
-
 

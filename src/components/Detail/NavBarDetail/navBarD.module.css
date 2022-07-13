@@ -1,0 +1,102 @@
+/* MEDIDAS CORREGIDAS A REM*/
+
+@import url(../../../index.css);
+
+.container{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.3rem); 
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px;
+    width: 100vw;
+    height: 4rem;
+    border-top-style: solid;
+    border-width: 0.06rem;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow:  0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.32);
+ 
+}
+
+.Items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--color4);
+    background-color: var(--color3);
+    width: 15px;
+    height: 15px;
+    right: 3vw;
+    top: 11vh;
+    border-radius: 50%;
+    font-size: xx-small;
+    z-index: 25;
+    
+}
+.button{
+        margin-left: 75rem;
+        margin-bottom: 2.8rem;
+        background: linear-gradient(117deg, rgb(254, 145, 80), rgb(254, 100, 70));
+        width: 6rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 0.3rem;        
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 2.7rem;
+        transition: box-shadow 0.25s ease 0s;
+        color: whitesmoke;
+        }
+        
+        .button:hover,
+        .button:focus {
+         background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+         box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+        }
+
+.Containerlogo{
+    margin-right: 2rem;
+}
+
+.logo{
+    position:relative;
+    width: 7.5rem;
+    margin-left: 0.9rem;
+}
+
+
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--color4);
+    width: 45px;
+    height: 45px;
+    right: 2vw;
+    top: 12vh;
+    border-radius: 50% 0% 50% 50%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    box-shadow:  5px 5px 14px rgba(0, 0, 0, 0.32);
+    z-index: 11;
+
+}
+.cart:hover{
+    box-shadow:  0px 0px 25px rgba(255, 0, 0, 0.41);
+    transform: rotate(180deg);
+    transition: 0.5s;
+    
+    
+}
+.cartlogo{
+    width: 25px;
+    height: 25px;
+}
+.cartlogo:hover{
+    transform: rotate(-180deg);
+    transition: 0.5s;
+}

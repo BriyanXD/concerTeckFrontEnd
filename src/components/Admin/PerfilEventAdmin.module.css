@@ -1,5 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 .containerGeneral{
-    background-color: rgba(104, 104, 104,.4);
+    background-color: rgba(104, 104, 104,.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -11,29 +14,72 @@
 }
 .containerInfo{
     background-color: white;
-    width: 70%;
-    height: 70%;
-    overflow: hidden;
+    width: 90%;
+    height: 80%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
 }
 .info{
-    width: 80%;
-    padding-left: 20px;
-    padding-right: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .containerClose{
     display: flex;
     justify-content: flex-end;
 }
 .btnClose{
+    width: 40px;
+    height: 40px;
     border: 0;
-    font-size: 15px;
-    border-radius: 30%;
-    margin-bottom: 90px;
+    border-radius: 50%;
+    background-color: rgb(247, 107, 107);
+    color: white;
+    cursor: pointer;
+    transition: .4s;
 }
 .btnClose:hover{
+    background-color: rgb(133, 133, 133);
+}
+.name{
+    display: flex;
+    justify-content: center;
+    font-size: 29px;
+    font-weight: 600;
+}
+.containerdatediv{
+    width: 60%;
+    background-color: rgb(122, 122, 122);
+    margin-right: 40px;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+   }
+.containerdate{
     color: wheat;
-    background-color: rgb(156, 156, 156);
+}
+.dataone{
+    display: flex;
+    color: wheat;
+    width: 100px;
+    font-weight: 600;
+}
+.allEmails{
+    background-color: rgb(218, 218, 218);
+    color: rgb(77, 77, 77);
+    overflow: auto;
+    height: 100px;
+    border-radius: 5px;
+}
+.emails{
+    padding-left: 20px;
 }

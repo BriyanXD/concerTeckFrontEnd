@@ -1,7 +1,7 @@
 .containerRegisterUser{
     width: 100vw;
     height: 100vh;
-    background: url("../../img/bk.jpg");
+    /* background: url("../../img/bk.jpg"); */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -15,23 +15,12 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between;   
 }
 
 .containerForm{
     height: 60vh;
     width: 45vw;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    
-}
-
-.containerSocialRegister{
-    height: 8vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +34,15 @@
     color: #dbdada;
     /* margin-right: 3vw; */
 }
+.containerSocialRegister{
+    height: 8vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
 
 
 .inputText{

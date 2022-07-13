@@ -4,6 +4,7 @@ import Modal from '../Modals/Modal/Modal.jsx';
 import s from '../Footer/Footer.module.css'
 import { Link } from "react-router-dom";
 
+
 export default function Footer() {
 
   const [active, setActive] = useState(false);
@@ -24,6 +25,9 @@ export default function Footer() {
           <Modal active={active} toggle={toggle}>
               <Contact/>
           </Modal>
+          <Link to={`/aboutUs`} style={{ textDecoration: "none" }}>
+          <h4 className={s.aboutUs}>Sobre nosotros</h4>
+          </Link>
         {/* column2 */}
         <div className={s.redes}>
             <a className={s.facebook} href="https://www.facebook.com/profile.php?id=100082560332640" target="_blank"><i class="fa-brands fa-facebook"></i></a>

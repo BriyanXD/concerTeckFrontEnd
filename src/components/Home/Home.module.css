@@ -1,3 +1,5 @@
+@import url(../../index.css);
+
 .container{
     position: absolute;
     display: flex;
@@ -5,8 +7,12 @@
     justify-content: space-between;
     width: 100vw;
     align-items: center;
-    background: url(../../img/bk.jpg);
+    background: url(../../img/felix-besombes-9qUEBg1qVKc-unsplash.jpg);
+    background-size: cover;
 }
+    /* background: url(../../img/bk.jpg); */
+  
+ 
 .eventcontainer{
     display: flex;
     justify-content: space-around;
@@ -49,6 +55,79 @@
     background-color: #FF4C29;
     border-radius: 5px;
 }
+.loader {
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 5px solid #e74c3c;
+    position: relative;
+    animation: load 2s linear infinite;
+  }
+  .noevents{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--color4);
+      margin-top: 10vh;
+      height: 30vh;
+     
+      margin-bottom: 20vh;
+  }
+  .notfound{
+      height: 90%;
+      width: 50%;
+
+      
+
+  }
+  
+  .loader::before,.loader::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  
+  .loader::before {
+    border-top: 5px solid #e67e22;
+    transform: rotate(120deg);
+  }
+  
+  .loader::after {
+    border-top: 5px solid #3498db;
+    transform: rotate(240deg);
+  }
+  
+  .loader span {
+    position: absolute;
+    font-size: small;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    animation: a2 2s linear infinite;
+  }
+  
+  @keyframes load {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes a2 {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 
 .heart{
     position: absolute;
@@ -57,7 +136,9 @@
     margin-left: 16px;
     margin-top: -2.7rem;
     cursor: pointer;
- 
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
 }
 .heartWhite{
     position: absolute;
@@ -66,7 +147,9 @@
     margin-left: 16px;
     margin-top: -2.7rem;
     cursor: pointer;
- 
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -77,7 +160,9 @@
     margin-left: 15px;
     margin-top: -2rem;
     cursor: pointer;
- 
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .heart2White{
@@ -87,5 +172,31 @@
     margin-left: 15px;
     margin-top: -2rem;
     cursor: pointer;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
  
+}
+.containerStreaming{
+  background-color: transparent;
+  color: red;
+  border: 0;
+  width: 30px;
+  height: px;
+  font-size: 20px;
+  cursor: pointer;
+  animation-name: streaming;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes streaming {
+  0%{
+    color: red;
+  }
+  50%{
+    color:#e74c3c;
+  }
+  100%{
+    color: red;
+  }
 }

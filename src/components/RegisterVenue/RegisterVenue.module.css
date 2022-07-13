@@ -1,0 +1,63 @@
+.inputText{
+    width:50%;
+    background-color: #dbdada;
+    display: flex;
+    margin-left: 9rem;
+    justify-content: center;
+    color: var(--color2);
+    border-radius: 5px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.inputText::placeholder{
+    font-size: 15px;
+    text-align: center;
+    color: var(--color2);
+}
+
+.inputText::-webkit-outer-spin-button,
+.inputText::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error{
+    width:50%;
+    background-color: #dbdada;
+    display: flex;
+    margin-left: 9rem;
+    justify-content: center;
+    color: var(--color2);
+    border-radius: 5px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    border-color: red; 
+    margin-top: 1rem; 
+}
+.error::placeholder{
+    color: red;
+}
+
+.btnLocation{
+    background: linear-gradient(117deg, rgb(254, 145, 80), rgb(254, 100, 70));
+    width: 10vw;
+    height: 2.5vw;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 0.5vw;
+    font-size: 1vw;
+    margin-left: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: box-shadow 0.25s ease 0s;
+    color: #EEEEEE;
+}
+
+.btnLocation:hover{
+    background: linear-gradient(117deg, rgb(248, 137, 73), rgb(248, 82, 49));
+    box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
+}

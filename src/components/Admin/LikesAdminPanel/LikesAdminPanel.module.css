@@ -1,0 +1,16 @@
+.containerLikes{
+    color: rgb(253, 95, 95);
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+    background-color: rgb(133, 133, 133);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    border-radius: 5px;
+}
+.text{
+    color: wheat;
+    font-size: 20px;
+}

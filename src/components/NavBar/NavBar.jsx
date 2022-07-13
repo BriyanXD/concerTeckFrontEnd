@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import style from "./NavBar.module.css";
 import Genre from "../Filters/Genre/Genre";
@@ -7,28 +7,66 @@ import SearchBar from "../SearchBar/SearchBar";
 import logoSombra from "../../assets/LogoSombra.png";
 import Date from "../Filters/Date/Date";
 import UserNavBar from "../UserNavbar/UserNavbar";
-import Modal from "../Modals/Modal/Modal";
+import Modal2 from "../Modals/Modal/Modal2";
 // import Login from "../Login/Login";
 import LoginAuth0  from '../LoginAuth0/LoginAuth0';
 // import PerfilYLogoutAuth0 from '../LogoutAuth0/PerfilYLogoutAuth0';
 import { useLocation } from "react-router-dom";
-import {MdOutlineShoppingCart } from 'react-icons/md';
+import {MdOutlineShoppingCart,MdOutlineWbSunny } from 'react-icons/md';
+import {FiMoon } from 'react-icons/fi';
 import Tooltip from '@mui/material/Tooltip';
+import Cart from '../Cart/Cart';
+import { useCart } from "react-use-cart";
+import { getCartDB } from '../../redux/actions';
 
 export default function NavBar({ setCurrenPag, setCurrentPage }) {
   const user = useSelector((state) => state.User);
+  const dispatch = useDispatch();
   let location = useLocation();
   let path = location.pathname.split("/");
 
   const [active, setActive] = useState(false);
-  
+ // const [flag, setFlag] = useState(false);
+  const { totalUniqueItems } = useCart();
+  const {cartDB} = useSelector(state => state);
+  let temporal = localStorage.getItem("user")
+  let userStorage 
+  if(temporal !== "nada"){
+    userStorage = JSON.parse(temporal)
+  }else{
+    userStorage = ""
+  }
+
+  useEffect(() => {
+    if(userStorage !== ""){
+      dispatch(getCartDB(userStorage.id))
+    }
+  },[])
 
   const toggle = () => {
     setActive(!active);
   };
 
+//   const switchButton = document.getElementById('switch');
+ 
+// function handleClick() {
+// if(flag){
+//   document.documentElement.setAttribute('theme', 'dark');
+//     switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active'
+//     setFlag(false);
+//   } else { 
+//     document.documentElement.setAttribute('theme', 'light');
+//     setFlag(true)}
+// };
+
   return (
     <div className={style.containerNav}>
+      {/* <div>
+        <button className={style.darkModeSwitch} onClick={handleClick} id="switch">
+          <span><MdOutlineWbSunny/></span>
+          <span><FiMoon/></span>
+        </button> 
+      </div> */}
       {/* Logitipo que redirecciona a home */}
       <div className={style.Containerlogo}>
         <Link to="/">
@@ -48,13 +86,18 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
             />
             <Date setCurrenPag={setCurrenPag} setCurrentPage={setCurrentPage} />
           </div>
-          <Link to="/Cart">
+        {userStorage.isAdmin === false || userStorage === "" ? <div>  {userStorage !== "" ? <div className={style.Items}>{cartDB.length}</div> : <div className={style.Items}>{totalUniqueItems}</div> }
           <Tooltip title="Ver carrito" arrow>
-          <div className={style.cart}>
-          <MdOutlineShoppingCart/>
+          <div onClick={toggle} className={style.cart}>
+          <MdOutlineShoppingCart className={style.cartlogo}/>
           </div>
-          </Tooltip>  
-          </Link>
+          </Tooltip>  </div>:null}
+        
+
+          <Modal2 active={active} toggle={toggle}>
+            <Cart/>
+          </Modal2>
+         
           <div className={style.registerAndLogin}>
             {/* <Link to="/events"><button className={style.btnRegister} type="button">Crear Evento</button></Link>  */}
             {/* {user === "" ? (

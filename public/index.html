@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <meta name="viewport" content="width-device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -31,6 +32,45 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="portal"></div>
+    <a href=""></a>
+
+
+  
+      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="ConcerTeck"
+      agent-id="394272ca-aadc-436b-afef-aab2a90d7178"
+      language-code="es"
+      chat-icon="./favicon.ico"
+      wait-open="true"
+    ></df-messenger>
+    <style>
+      
+      df-messenger{
+        height: 300px;
+        max-height: 90%;
+        min-height: 30%;
+        --df-messenger-button-titlebar-color: #facc4e;	
+        --df-messenger-chat-background-color: #2e2e2e;
+        --df-messenger-input-box-color: #2e2e2e;
+        --df-messenger-input-font-color: white;
+        --df-messenger-button-titlebar-font-color:var(--df-messenger-chat-background-color)
+      }
+    </style>
+    <script>
+    window.addEventListener('dfMessengerLoaded', function (event) {
+    const dfMessenger = document.querySelector('df-messenger'); 
+    const style = document.createElement('style');
+
+    const nonMobileMinWidth = 501; // Breakpoint where DF Messenger switches between mobile/non-mobile styles
+
+    style.textContent = '@media screen and (min-width: ' + nonMobileMinWidth + 'px) { .chat-wrapper { max-height: 70% } }';
+
+    dfMessenger.shadowRoot.querySelector('df-messenger-chat').shadowRoot.appendChild(style);
+    })
+    </script>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

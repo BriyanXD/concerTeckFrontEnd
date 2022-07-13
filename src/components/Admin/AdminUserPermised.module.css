@@ -42,17 +42,18 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10%;
+    padding: 5px;
 }
 .buttonClose{
+    width: 40px;
+    height: 40px;
     border: 0;
-    width: 30px;
-    height: 30px;
     border-radius: 50%;
-    margin-top: 5px;
-    margin-right: 5px;
-    transition: .5s;
+    background-color: rgb(247, 107, 107);
+    color: white;
+    cursor: pointer;
+    transition: .4s;
 }
 .buttonClose:hover{
-    color: wheat;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(133, 133, 133);
 }

@@ -3,30 +3,37 @@ import { useAuth0 } from "@auth0/auth0-react";
 import style from './PerfilYLogoutAuth0.module.css';
 import { Link } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux"
-import { register } from "../../redux/actions";
+import { register, verifiUserBanned } from "../../redux/actions";
 
 
 export default function PerfilYLogoutAuth0(){
   const dispatch = useDispatch()
   const registro = useSelector((state) => {return state.User})
-  console.log(registro,'prueba')
-  const { user, isAuthenticated, logout } = useAuth0();
-    
+  const userBanned = useSelector((state) =>  state.stateAdminPanel.userBanned)
+  const { isAuthenticated, logout } = useAuth0();
+  const userdates = JSON.parse(localStorage.getItem("userdates"))
     useEffect(() => {
       findOrRegister()
+      dispatch(verifiUserBanned(userdates.email))
     },[dispatch])
 
-    function findOrRegister(){
+     function findOrRegister(){
       const newUser={
-        username:user.nickname,
-        name:user.name,
-        email:user.email,
+        username: userdates.nickname,
+        name: userdates.name,
+        email: userdates.email,
       }
-      dispatch(register(newUser))
+       dispatch(register(newUser))
     }
     function clearLocalStorageToken(){
-      localStorage.setItem("token"," ")
+      localStorage.setItem("token"," ");
+      localStorage.setItem("user", "nada");
       logout({ returnTo: window.location.origin })
+    }
+    if(userBanned){
+      setInterval(()=>{
+        logout({ returnTo: window.location.origin })
+      },2000)
     }
   return (
     <div>
@@ -34,16 +41,16 @@ export default function PerfilYLogoutAuth0(){
       {registro[0]?.isAdmin===true?
        <Link to={'/perfil/panelAdmin'} style={{ textDecoration: "none", color: "inherit" }}>
          <div className={style.box}>
-            <img src={user?.picture} alt={user.name} className={style.img}/>
-       <p className={style.p}>{user.name}</p>
-       </div> 
-        </Link> 
+            <img src={userdates?.picture} alt={userdates.name} className={style.img}/>
+       <p className={style.p}>{userdates.name}</p>
+       </div>
+        </Link>
       :
       register?isAuthenticated ?
           <Link to={`/perfil/${registro[0]?.id}`} style={{ textDecoration: "none", color: "inherit" }}>
         <div className={style.box}>
-            <img src={user?.picture} alt={user.name} className={style.img}/>
-       <p className={style.p}>{user.name}</p>
+            <img src={userdates?.picture} alt={userdates.name} className={style.img}/>
+       <p className={style.p}>{userdates.name.split([' '],[1])}</p>
        </div> 
        </Link> 
       /*  :  registro?.isAdmin===true ?
@@ -55,10 +62,9 @@ export default function PerfilYLogoutAuth0(){
         </Link> */ : null : null
       }
        <button onClick={() => clearLocalStorageToken()} className={style.button}>
-       Log Out
+       Cerrar sesión
        </button>
       </div>
-        
     </div>
   );
 };

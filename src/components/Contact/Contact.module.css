@@ -1,3 +1,5 @@
+/* CSS CORREGIDO A REM!!!!*/
+
 @import url(../../index.css);
 
 .containerContact{
@@ -6,15 +8,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40vw;
+    width: 39rem;
     height: auto;
-    margin-top: 1px;
-    box-shadow:  5px 5px 14px rgba(0, 0, 0, 0.32);
-    border-radius: 10px;
-    border: solid 1px rgba(255, 255, 255, 0.3);
+    margin-top: 0.06rem;
+    box-shadow:  0.3rem 0.3rem 0.9rem rgba(0, 0, 0, 0.32);
+    border-radius: 0.6rem;
+    border: solid 0.06rem rgba(255, 255, 255, 0.3);
 }
 .form{
-    margin: 15px;
+    margin: 0.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,16 +30,16 @@
     display: flex;
     justify-content: center;
     color: var(--color2);
-    border-radius: 5px;
-    height: 30px;
-    font-size: 15px;
-    margin-left: -40px;
-    margin-right: 40px;
+    border-radius: 0.3rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+    margin-left: -2.5rem;
+    margin-right: 2.5rem;
 
 }
 .nameContact::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
@@ -48,16 +50,16 @@
     display: flex;
     justify-content: center;
     /* color: red; */
-    border-radius: 5px;
-    height: 30px;
-    font-size: 15px;
-    margin-left: -40px;
-    margin-right: 40px;
+    border-radius: 0.3rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+    margin-left: -2.5rem;
+    margin-right: 2.5rem;
 }
 
 .errors::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
     color: red;
     
@@ -71,17 +73,17 @@
     display: flex;
     justify-content: center;
     color: var(--color2);
-    border-radius: 5px;
-    height: 30px;
-    font-size: 15px;
-    margin-left: -40px;
-    margin-right: 40px;
+    border-radius: 0.3rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+    margin-left: -2.5rem;
+    margin-right: 2.5rem;
 
 
 }
 .mailContact::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.3rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
@@ -91,16 +93,16 @@
     display: flex;
     justify-content: center;
     color: var(--color2);
-    border-radius: 5px;
-    height: 30px;
-    font-size: 15px;
-    margin-left: -40px;
-    margin-right: 40px;
+    border-radius: 0.3rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+    margin-left: -2.5rem;
+    margin-right: 2.5rem;
 
 }
 .phoneContact::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
@@ -108,19 +110,18 @@
     font-family: var(--fontpage);
     overflow: scroll;
     resize: none;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--color2);
-    margin-bottom: 2vw; 
+    margin-bottom: 1.8rem; 
     background-color: #dbdada;
     width: 100%;
     height:100%;
-    border-radius: 5px;
-    font-size: 15px;
-    /* padding-left: 10px; */
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
 }
 .reasonContact::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
 }
 
 
@@ -128,20 +129,20 @@
     font-family: var(--fontpage);
     overflow: scroll;
     resize: none;
-    font-size: 14px;
-    margin-bottom: 2vw; 
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem; 
     background-color: #dbdada;
     width: 100%;
     height:100%;
-    border-radius: 5px;
-    font-size: 15px;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
     border-color: red;
 
 }
 
 .errorMessage::placeholder{
-    padding-left: 10px;
-    font-size: 15px;
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
     color: red;
     font-weight:500
@@ -153,16 +154,16 @@
 }
 .btnSend{
    background-color: #FF4C29;
-   width: 10vw;
-   height: 3vw;
+   width: 9.5rem;
+   height: 2.8rem;
    text-align: center;
    border: 0;
-   font-size: 15px;
+   font-size: 0.9rem;
    cursor: pointer;
    font-weight: bold;
    color: #dbdada;
    transition: 0.3s;
-   margin-bottom: 5px;
+   margin-bottom: 0.3rem;
 }
 
 .btnSend:hover{
@@ -182,6 +183,6 @@
     color:#ff3f18;
     font-weight: 400;
     font-size: medium;
-    padding: -12px;
+    padding: -0.7rem;
    
 }

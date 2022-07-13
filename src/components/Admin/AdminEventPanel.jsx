@@ -27,7 +27,7 @@ export default function AdminEventPanel(){
                     return(
                         <div key={user.id}>
                         <EventCard aux={true} id={user.id} name={user.name}/>
-                    </div> )}) 
+                    </div> )})
                 :
                 allEvents ? allEvents.map(event => {
                     return( <div>

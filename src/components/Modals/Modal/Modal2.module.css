@@ -1,0 +1,46 @@
+
+.containerBase{
+    position: absolute;
+    top: 12vh;
+    right: 6vw;
+    z-index: 21;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-start;
+}
+
+.containerWindow{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:  5px 5px 14px rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    z-index: 15;
+    min-width: auto;
+    height: auto;
+}
+
+.btn{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: transparent;
+    background-color: transparent;
+    font-size: 20px;
+    color: #dbdada;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.backgroundWindow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  
+}

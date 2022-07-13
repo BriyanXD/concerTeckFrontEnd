@@ -11,29 +11,57 @@
 }
 .containerInfo{
     background-color: white;
-    width: 70%;
+    width: 40%;
     height: 70%;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
 }
 .info{
-    width: 80%;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
 }
 .containerClose{
     display: flex;
     justify-content: flex-end;
+    padding: 5px;
 }
 .btnClose{
+    width: 40px;
+    height: 40px;
     border: 0;
-    font-size: 15px;
-    border-radius: 30%;
-    margin-bottom: 90px;
+    border-radius: 50%;
+    background-color: rgb(247, 107, 107);
+    color: white;
+    cursor: pointer;
+    transition: .4s;
 }
 .btnClose:hover{
+    background-color: rgb(133, 133, 133);
+}
+.tickets{
+    background-color: rgb(133, 133, 133);
     color: wheat;
-    background-color: rgb(156, 156, 156);
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+}
+.title{
+    font-weight: 600;
+}
+.admin{
+    background-color: yellow;
+    width: 140px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
