@@ -31,6 +31,9 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
   const {cartDB} = useSelector(state => state);
   let temporal = localStorage.getItem("user")
   let userStorage
+  if(temporal === null){
+    localStorage.setItem("user","nada")
+  }
   if(temporal !== "nada"){
     userStorage = JSON.parse(temporal)
   }else{
@@ -38,7 +41,7 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
   }
 
   useEffect(() => {
-    if(userStorage !== "" || userStorage !== null){
+    if(userStorage !== "" && userStorage !== null){
       console.log(userStorage)
       dispatch(getCartDB(userStorage.id))
     }

@@ -26,7 +26,10 @@ export default function Home() {
   const {Likes} = useSelector((state)=> state);
   const { User, AllEvents } = useSelector((state) => state)
   let temporal = localStorage.getItem("user")
-  let userStorage 
+  let userStorage
+  if(temporal === null){
+    localStorage.setItem("user","nada")
+  }
   if(temporal !== "nada"){
     userStorage = JSON.parse(temporal)
   }else{
@@ -79,13 +82,13 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getEvents());
-    if(userStorage !== "" || userStorage !== null){
+    if(userStorage !== "" && userStorage !== null){
       dispatch(getCartDB(userStorage.id))
     }
   }, [dispatch]);
 
   useEffect(()=>{
-    if(userStorage !== ""|| userStorage !== null){
+    if(userStorage !== "" && userStorage !== null){
       dispatch(getLikes(userStorage.id))
     }
   }, [dispatch])
