@@ -528,7 +528,11 @@ export function activeModalOrdersAdminPanel(booleano) {
 export function addCartDB(data) {
   return async function () {
     try {
-      await axios.post(`${url}/api/cart`, data);
+      await axios.post(`${url}/api/cart`, data, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
     } catch (error) {
       console.log(error);
     }
@@ -570,7 +574,11 @@ export function getCartDB(idUser) {
 export function deleteCart(id) {
   return async function (dispatch) {
     try {
-      const data = await axios.delete(`${url}/api/cart?id=${id}`);
+      const data = await axios.delete(`${url}/api/cart?id=${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       return dispatch({
         type: "DELETE_CART",
         payload: data.data,
@@ -584,7 +592,11 @@ export function deleteCart(id) {
 export function putCartDB(value) {
   return async function (dispatch) {
     try {
-      const data = await axios.put(`${url}/api/cart`, value);
+      const data = await axios.put(`${url}/api/cart`, value, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       return dispatch({
         type: "UPDATE_CART",
         payload: data.data,
