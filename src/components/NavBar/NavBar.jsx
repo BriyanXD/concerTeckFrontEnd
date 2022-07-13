@@ -29,19 +29,14 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
  // const [flag, setFlag] = useState(false);
   const { totalUniqueItems } = useCart();
   const {cartDB} = useSelector(state => state);
-  let temporal = "nada"
+  let temporal = localStorage.getItem("user")
   let userStorage
   if(temporal !== "nada"){
     userStorage = JSON.parse(temporal)
   }else{
     userStorage = ""
   }
-  try {
-    temporal = localStorage.getItem("user")
 
-  } catch (error) {
-    console.log(error,"Error navbar")
-  }
   useEffect(() => {
     if(userStorage !== ""){
       dispatch(getCartDB(userStorage.id))
@@ -91,7 +86,7 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
             />
             <Date setCurrenPag={setCurrenPag} setCurrentPage={setCurrentPage} />
           </div>
-        {userStorage.isAdmin === false || userStorage === "" ? <div>  {userStorage !== "" ? <div className={style.Items}>{cartDB.length}</div> : <div className={style.Items}>{totalUniqueItems}</div> }
+        { userStorage?.isAdmin === false || userStorage === "" ? <div>  {userStorage !== "" ? <div className={style.Items}>{cartDB.length}</div> : <div className={style.Items}>{totalUniqueItems}</div> }
           <Tooltip title="Ver carrito" arrow>
           <div onClick={toggle} className={style.cart}>
           <MdOutlineShoppingCart className={style.cartlogo}/>

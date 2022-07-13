@@ -25,13 +25,8 @@ export default function Home() {
   const { user, loginWithPopup } = useAuth0();
   const {Likes} = useSelector((state)=> state);
   const { User, AllEvents } = useSelector((state) => state)
-  let temporal = "nada"
+  let temporal = localStorage.getItem("user")
   let userStorage 
-  try {
-    temporal = localStorage.getItem("user")
-  } catch (error) {
-    console.log(error,"Error home")
-  }
   if(temporal !== "nada"){
     userStorage = JSON.parse(temporal)
   }else{
