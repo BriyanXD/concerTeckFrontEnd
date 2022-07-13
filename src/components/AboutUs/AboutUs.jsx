@@ -39,7 +39,7 @@ export default function AboutUs(){
             <p>Desarrollador FullStack. Apasionado en tecnologías como Javascript, React, Typescript, Redux, Css, Node.js, Express, MongoDB, PostgreSQL, SQLite, Git y GitHub.</p>
             </div>
             <div className={style.box}>
-            <h3>Lione Orbe</h3>
+            <h3>Lionel Orbe</h3>
             <img className={style.img} src={lio} alt=""/>
             <p>Desarrollador web, con conocimiento en JavaScript, CSS, HTML, React, Redux, Node.js, Express, Sequelize, PostgreSQL, Git, GitHub.</p>
             </div>
