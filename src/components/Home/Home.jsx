@@ -79,13 +79,13 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getEvents());
-    if(userStorage !== ""){
+    if(userStorage !== "" || userStorage !== null){
       dispatch(getCartDB(userStorage.id))
     }
   }, [dispatch]);
 
   useEffect(()=>{
-    if(userStorage !== ""){
+    if(userStorage !== ""|| userStorage !== null){
       dispatch(getLikes(userStorage.id))
     }
   }, [dispatch])
