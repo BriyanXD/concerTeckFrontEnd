@@ -39,6 +39,7 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
 
   useEffect(() => {
     if(userStorage !== ""){
+      console.log(userStorage)
       dispatch(getCartDB(userStorage.id))
     }
   },[])
