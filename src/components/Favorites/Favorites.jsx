@@ -45,7 +45,7 @@ export default function Favorites(){
                             if(e.idEvent===el.id){
                                 return (
                                     <div className={s.containerClose}>
-                                       <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                                       <Link style={{ textDecoration: "none" }} to={`/detail/${el.id}`}>
                                        <CardBigEvent
                                        name={el.name}
                                        genreId={el.genreId}
@@ -69,7 +69,7 @@ export default function Favorites(){
                         if(e.idEvent===el.id){
                             return (
                                 <div className={s.containerClose}>
-                                   <Link style={{ textDecoration: "none" }} to={`/${el.id}`}>
+                                   <Link style={{ textDecoration: "none" }} to={`/detail/${el.id}`}>
                                    <CardEvent
                                    name={el.name}
                                    genreId={el.genreId}

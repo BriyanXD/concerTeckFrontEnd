@@ -849,7 +849,11 @@ export function checkout(line_items) {
 export function ActualizacionStock(descontar) {
   return async function (dispatch) {
     try {
-      await axios.put(`${url}/api/cart/update`, { descontar });
+      await axios.put(`${url}/api/cart/update`, { descontar },{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
     } catch (error) {
       console.log(error.message);
     }
