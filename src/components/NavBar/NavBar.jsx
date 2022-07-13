@@ -29,14 +29,19 @@ export default function NavBar({ setCurrenPag, setCurrentPage }) {
  // const [flag, setFlag] = useState(false);
   const { totalUniqueItems } = useCart();
   const {cartDB} = useSelector(state => state);
-  let temporal = localStorage.getItem("user")
-  let userStorage 
+  let temporal = "nada"
+  let userStorage
   if(temporal !== "nada"){
     userStorage = JSON.parse(temporal)
   }else{
     userStorage = ""
   }
+  try {
+    temporal = localStorage.getItem("user")
 
+  } catch (error) {
+    console.log(error,"Error navbar")
+  }
   useEffect(() => {
     if(userStorage !== ""){
       dispatch(getCartDB(userStorage.id))
