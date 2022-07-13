@@ -10,8 +10,8 @@ export default function DatosUser () {
     // console.log('user en datosuser',user)
     return (
           <div className={style.containerUser} >
-            <img className={style.image} src={user.picture} alt="foto perfil" />
-            <h2 className={style.userData}>Nombre: {user.name}</h2>
-            <h2 className={style.userData}>Correo: {user.email}</h2>
+            {user ?<img className={style.image} src={user.picture} alt="foto perfil" />:null}
+            {user ?<h2 className={style.userData}>Nombre: {user.name}</h2>: null}
+            {user ? <h2 className={style.userData}>Correo: {user.email}</h2>: null}
           </div>);
     };
